@@ -26,11 +26,12 @@ def test_insert_head(linl):
 
 def test_insert_end(linl):
     assert linl.insert_at_end(2) == None
-    assert linl.head.data == 2
+    assert linl.insert_at_end("3") == 'Узел с данными 3 добавлен в конец списка'
+
 
     assert linl.insert_at_end("223") == "Узел с данными 223 добавлен в конец списка"
-    assert linl.head.next_node.data == "223"
-
+    assert linl.head.next_node.next_node.data == "223"
+    assert linl.head.data == 2
 
 def test_remove_node(linl):
     linl.insert_at_head(1)
