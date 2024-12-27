@@ -66,7 +66,7 @@ class LinkedList:
             current_node_position += 1
         """Если есть опционально (код выше то следующие 2 строки не нужны)"""
         if current_node is None:
-            return None
+            return None,"не найдена позиция"
         new_node.next_node = current_node.next_node
         current_node.next_node = new_node
         return f"Узел с данными {new_node.data} добавлен на позицию {node_position}"
